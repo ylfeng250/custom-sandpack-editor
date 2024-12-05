@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 5px;
+            width: 300px;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Module CDN Debug</h1>
+    
+    <div class="input-group">
+        <label>包名和版本 (例如: {"lodash": "^4.0.0"})</label>
+        <input id="depInput" type="text" value='{"lodash": "^4.0.0"}'>
+    </div>
+
+    <button id="fetchManifestBtn">获取依赖清单</button>
+    <button id="fetchModuleBtn">获取模块内容</button>
+
+    <h3>结果：</h3>
+    <pre id="result"></pre>
+
+    <script type="module" src="/src/debug.ts"></script>
+</body>
+</html> 
